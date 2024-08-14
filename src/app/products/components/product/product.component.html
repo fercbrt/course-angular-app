@@ -1,1 +1,27 @@
-<p>product works!</p>
+<h2>Listado de productos</h2>
+@if (products.length > 0) {
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (item of products; track $index) {
+        <tr>
+          <td>{{ item.id }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.price }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+} @else {
+  <div>
+    <p>No products founded</p>
+  </div>
+  }
