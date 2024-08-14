@@ -13,6 +13,8 @@ export class AppComponent {
   title = 'Hello world!';
   enabled: boolean = false;
 
+  courses = ['Angular', 'Spring Boot', 'MySQL'];
+
   changeEnabled(): void{
     this.enabled = !this.enabled;
   }
