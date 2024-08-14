@@ -10,23 +10,18 @@ export class ProductService {
   private products: Product[] = [
     {
       id: 1,
-      name: 'Angular',
-      price: 100,
-      description: 'Angular Course'
+      name: 'Mesa comedor',
+      description: 'Excelente mesa para el comedor',
+      price: 700
     },
     {
       id: 2,
-      name: 'Spring Boot',
-      price: 150,
-      description: 'Spring Boot Course'
-    },
-    {
-      id: 3,
-      name: 'MySQL',
-      price: 200,
-      description: 'MySQL Course'
+      name: 'Teclado mecanico',
+      description: 'Excelente teclado para typing',
+      price: 500
     }
   ];
+
   constructor() { }
 
   findAll(): Observable<Product[]> {

@@ -1,23 +1,24 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { CommonModule, NgIf } from '@angular/common';
-import { ProductComponent } from './products/components/product/product.component';
-import { FormComponent } from './products/components/form/form.component';
+import { ProductComponent } from './products/components/product.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, ProductComponent, FormComponent],
+  imports: [CommonModule, RouterOutlet, ProductComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Hello world!';
+  title: string = 'Hola mundo Angular 17';
   enabled: boolean = false;
 
-  courses = ['Angular', 'Spring Boot', 'MySQL'];
+  courses: string[] = ['Angular', 'React', 'Spring Boot'];
 
-  changeEnabled(): void{
-    this.enabled = !this.enabled;
+  setEnabled(): void {
+    this.enabled = this.enabled? false: true;
+    console.log('hemos hecho clic en setEnabled')
   }
+
 }

@@ -16,4 +16,8 @@ export class FormComponent {
     price: 800,
     description: 'It\'s a keyboard'
   };
+
+  onSubmit(): void {
+    console.log(this.product);
+  }
 }
